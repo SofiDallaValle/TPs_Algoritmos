@@ -21,20 +21,18 @@ class Queue:
     
     def attention(self):
         return (
-            self._elements.pop(0)
-            if self._elements
-            else None
-        )
+            if self._elements:
+                self._elements.pop(0)
+            else None)
     
     def size(self) -> int:
         return len(self._elements)
     
     def on_front(self):
         return (
-            self._elements[0]
-            if self._elements
-            else None
-        )
+            if self._elements:
+                self._elements[0] 
+            else None)
     
     def move_to_end(self):
         if self._elements:
